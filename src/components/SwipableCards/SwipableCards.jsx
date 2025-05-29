@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import "./SwipableCards.css";
 import Card from "../Card/Card";
+import { useTheme } from "../../utils/ThemeContext";
 
 const SwipeableCards = ({
   resetSwipeHistory,
@@ -12,6 +13,7 @@ const SwipeableCards = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const { theme } = useTheme();
 
   const handleSwipeLeft = useCallback(
     (user) => {
@@ -26,7 +28,7 @@ const SwipeableCards = ({
         setIsAnimating(false);
       }, 300);
     },
-    [currentIndex, users.length, onSwipeLeft, isAnimating]
+    [onSwipeLeft, isAnimating]
   );
 
   const handleSwipeRight = useCallback(
@@ -42,18 +44,18 @@ const SwipeableCards = ({
         setIsAnimating(false);
       }, 300);
     },
-    [currentIndex, users.length, onSwipeRight, isAnimating]
+    [onSwipeRight, isAnimating]
   );
 
   const resetCards = useCallback(() => {
     setCurrentIndex(0);
     resetSwipeHistory();
     setIsAnimating(false);
-  }, []);
+  }, [resetSwipeHistory]);
 
   if (currentIndex >= users.length) {
     return (
-      <div className="completion-screen">
+      <div className={`completion-screen ${theme}`}>
         <div
           className="completion-screen__emoji"
           role="img"

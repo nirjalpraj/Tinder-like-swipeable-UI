@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./Card.css";
 import { useCallback } from "react";
+import { useTheme } from "../../utils/ThemeContext";
 
 const Card = ({
   user,
@@ -15,6 +16,7 @@ const Card = ({
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const cardRef = useRef(null);
+  const { theme } = useTheme();
 
   const MAX_ROTATION = 15; // Maximum rotation in degrees
   const OPACITY_FACTOR = 200; // Distance for opacity calculation
@@ -143,7 +145,7 @@ const Card = ({
       ref={cardRef}
       className={`card  ${isDragging ? "card--dragging" : ""} ${
         isTopCard ? "card--top" : ""
-      }`}
+      } ${theme}`}
       style={cardStyle}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}

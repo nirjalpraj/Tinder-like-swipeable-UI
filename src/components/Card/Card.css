@@ -14,18 +14,26 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff2eb;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   margin: 16px;
-  /* transition: transform 0.2s ease-in-out; */
   height: 20rem;
   width: 20rem;
   cursor: grab;
   user-select: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
   will-change: transform;
+}
+
+body.light .card {
+  background-color: #fff2eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .card {
+  background-color: #4a4d52;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -51,10 +59,24 @@
   font-size: 1.3rem;
   margin: 0.5rem 0;
   font-weight: 500;
+}
+
+body.light .card h3 {
   color: #0e2148;
+}
+
+body.dark .card h3 {
+  color: #f0f0f0;
 }
 
 .card:hover {
   transform: translateY(-4px);
+}
+
+body.light .card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }

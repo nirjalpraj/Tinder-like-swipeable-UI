@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   height: 40vh;
+  width: 40vw;
   /* background-color: #f0f0f0; */
   margin: 1rem;
   padding: 1rem;
@@ -40,15 +41,59 @@
   font-size: 1rem;
   font-weight: bold;
   transition: background-color 0.3s ease;
+
+  /* Light Theme for reset button */
+  body.light .completion-screen button {
+    background-color: #fef2ea; /* Original light background */
+    color: #333; /* Default text color for light theme button */
+  }
+
+  /* Dark Theme for reset button */
+  body.dark .completion-screen button {
+    background-color: #555861; /* Darker background */
+    color: #eee; /* Lighter text */
+  }
 }
 
 .completion-screen__title {
   font-size: 1.2rem;
-  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Light Theme for title */
+body.light .completion-screen__title {
+  color: #333; /* Original color */
+}
+
+/* Dark Theme for title */
+body.dark .completion-screen__title {
+  color: #eee; /* Lighter color for dark theme */
 }
 
 .completion-screen__subtitle {
   font-size: 1rem;
-  color: #666;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Light Theme for subtitle */
+body.light .completion-screen__subtitle {
+  color: #666; /* Original color */
+}
+
+/* Dark Theme for subtitle */
+body.dark .completion-screen__subtitle {
+  color: #bbb; /* Lighter color for dark theme */
+}
+
+/* Light Theme styles for completion screen */
+body.light .completion-screen {
+  background-color: #f0f0f0; /* Original light background */
+  color: #333;
+}
+
+/* Dark Theme styles for completion screen */
+body.dark .completion-screen {
+  background-color: #3a3f47; /* Darker background */
+  color: #f0f0f0; /* Lighter text */
 }

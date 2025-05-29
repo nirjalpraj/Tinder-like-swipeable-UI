@@ -2,9 +2,11 @@ import "./App.css";
 import { users } from "./utils/constants";
 import { useState } from "react";
 import SwipeableCards from "./components/SwipableCards/SwipableCards";
+import { useTheme } from "./utils/ThemeContext";
 
 const App = () => {
   const [swipeHistory, setSwipeHistory] = useState([]);
+  const { theme, toggleTheme } = useTheme();
   const swipeThreshold = 100;
   const maxVisibleCards = 3;
 
@@ -32,7 +34,10 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={`app-container ${theme}`}>
+      <button onClick={toggleTheme} className="theme-toggle-button">
+        Switch to {theme === "light" ? "Dark" : "Light"} Theme
+      </button>
       <div className="swipe-counter">
         <div className="display-button-left">
           Pass:{" "}
