@@ -5,6 +5,7 @@ import "./SwipableCards.css";
 import Card from "../Card/Card";
 
 const SwipeableCards = ({
+  resetSwipeHistory,
   users,
   onSwipeLeft,
   onSwipeRight,
@@ -48,8 +49,7 @@ const SwipeableCards = ({
 
   const resetCards = useCallback(() => {
     setCurrentIndex(0);
-    // setLeftSwipeCount(0)
-    // setRightSwipeCount(0)
+    resetSwipeHistory();
     setIsAnimating(false);
   }, []);
 

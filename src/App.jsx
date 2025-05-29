@@ -39,6 +39,10 @@ const App = () => {
     );
   };
 
+  const resetSwipeHistory = () => {
+    setSwipeHistory([]);
+  };
+
   return (
     <div>
       <div className="swipe-counter">
@@ -53,6 +57,7 @@ const App = () => {
       </div>
       <div className="main">
         <SwipeableCards
+          resetSwipeHistory={resetSwipeHistory}
           users={users}
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
