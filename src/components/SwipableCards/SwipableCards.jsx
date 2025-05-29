@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useCallback } from "react";
 import "./SwipableCards.css";
 import Card from "../Card/Card";

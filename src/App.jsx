@@ -27,18 +27,6 @@ const App = () => {
     setSwipeHistory((prev) => [...prev, entry]);
   };
 
-  const handleComplete = () => {
-    alert(
-      `Demo completed! You swiped through ${
-        users.length
-      } cards. You have swiped left ${
-        swipeHistory.filter((entry) => entry.direction === "left").length
-      } times and right ${
-        swipeHistory.filter((entry) => entry.direction === "right").length
-      } times.`
-    );
-  };
-
   const resetSwipeHistory = () => {
     setSwipeHistory([]);
   };
@@ -61,7 +49,6 @@ const App = () => {
           users={users}
           onSwipeLeft={handleSwipeLeft}
           onSwipeRight={handleSwipeRight}
-          onComplete={handleComplete}
           maxVisibleCards={maxVisibleCards}
           swipeThreshold={swipeThreshold}
         />
