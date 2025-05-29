@@ -17,8 +17,8 @@
 }
 
 body.dark .app-container {
-  background-color: #282c34; /* Dark background for the app container */
-  color: #f0f0f0; /* Light text color for dark theme */
+  background-color: #282c34;
+  color: #f0f0f0;
 }
 
 .theme-toggle-button {
@@ -52,12 +52,11 @@ body.dark .theme-toggle-button {
 }
 
 body.light .main {
-  background-color: #ffdcdc; /* Your original light background */
+  background-color: #ffdcdc;
 }
 
-/* Dark theme for .main */
 body.dark .main {
-  background-color: #36393f; /* A darker background for the main section */
+  background-color: #36393f;
 }
 
 .swipe-counter {

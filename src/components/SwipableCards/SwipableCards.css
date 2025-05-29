@@ -42,16 +42,14 @@
   font-weight: bold;
   transition: background-color 0.3s ease;
 
-  /* Light Theme for reset button */
   body.light .completion-screen button {
-    background-color: #fef2ea; /* Original light background */
-    color: #333; /* Default text color for light theme button */
+    background-color: #fef2ea;
+    color: #333;
   }
 
-  /* Dark Theme for reset button */
   body.dark .completion-screen button {
-    background-color: #555861; /* Darker background */
-    color: #eee; /* Lighter text */
+    background-color: #555861;
+    color: #eee;
   }
 }
 
@@ -60,14 +58,12 @@
   transition: color 0.3s ease;
 }
 
-/* Light Theme for title */
 body.light .completion-screen__title {
-  color: #333; /* Original color */
+  color: #333;
 }
 
-/* Dark Theme for title */
 body.dark .completion-screen__title {
-  color: #eee; /* Lighter color for dark theme */
+  color: #eee;
 }
 
 .completion-screen__subtitle {
@@ -76,24 +72,19 @@ body.dark .completion-screen__title {
   transition: color 0.3s ease;
 }
 
-/* Light Theme for subtitle */
 body.light .completion-screen__subtitle {
-  color: #666; /* Original color */
+  color: #666;
 }
 
-/* Dark Theme for subtitle */
 body.dark .completion-screen__subtitle {
-  color: #bbb; /* Lighter color for dark theme */
+  color: #bbb;
 }
 
-/* Light Theme styles for completion screen */
 body.light .completion-screen {
-  background-color: #f0f0f0; /* Original light background */
+  background-color: #f0f0f0;
   color: #333;
 }
-
-/* Dark Theme styles for completion screen */
 body.dark .completion-screen {
-  background-color: #3a3f47; /* Darker background */
-  color: #f0f0f0; /* Lighter text */
+  background-color: #3a3f47;
+  color: #f0f0f0;
 }

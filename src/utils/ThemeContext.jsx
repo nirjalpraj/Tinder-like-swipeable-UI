@@ -4,7 +4,6 @@ const ThemeContext = createContext();
 
 export const useTheme = () => useContext(ThemeContext);
 
-// Create the ThemeProvider component
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem("theme");
