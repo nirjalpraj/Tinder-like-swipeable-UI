@@ -14,3 +14,32 @@
   justify-content: center;
   background-color: #ffdcdc;
 }
+
+.swipe-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.display-button-left {
+  background-color: #ffb3b3;
+  color: rgb(233, 92, 92);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.display-button-right {
+  background-color: #ffb3b3;
+  color: rgb(45, 144, 45);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}

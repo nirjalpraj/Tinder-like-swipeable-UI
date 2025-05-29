@@ -40,15 +40,27 @@ const App = () => {
   };
 
   return (
-    <div className="main">
-      <SwipeableCards
-        users={users}
-        onSwipeLeft={handleSwipeLeft}
-        onSwipeRight={handleSwipeRight}
-        onComplete={handleComplete}
-        maxVisibleCards={maxVisibleCards}
-        swipeThreshold={swipeThreshold}
-      />
+    <div>
+      <div className="swipe-counter">
+        <div className="display-button-left">
+          Pass:{" "}
+          {swipeHistory.filter((entry) => entry.direction === "left").length}
+        </div>
+        <div className="display-button-right">
+          Like:{" "}
+          {swipeHistory.filter((entry) => entry.direction === "right").length}
+        </div>
+      </div>
+      <div className="main">
+        <SwipeableCards
+          users={users}
+          onSwipeLeft={handleSwipeLeft}
+          onSwipeRight={handleSwipeRight}
+          onComplete={handleComplete}
+          maxVisibleCards={maxVisibleCards}
+          swipeThreshold={swipeThreshold}
+        />
+      </div>
     </div>
   );
 };
