@@ -1,4 +1,19 @@
+.card--dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+.card--top {
+  z-index: 10;
+}
+
+/* Card Content */
 .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #fff2eb;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -9,11 +24,8 @@
   width: 20rem;
   cursor: grab;
   user-select: none;
-}
-
-.card.dragging {
-  cursor: grabbing;
-  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
 }
 
 .card img {
@@ -23,7 +35,19 @@
   border-radius: 8px;
 }
 
-.card h1 {
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card__image {
+  transform: scale(1.05);
+}
+
+.card h3 {
   font-size: 1.3rem;
   margin: 0.5rem 0;
   font-weight: 500;

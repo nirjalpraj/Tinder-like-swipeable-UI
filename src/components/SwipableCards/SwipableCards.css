@@ -1,0 +1,17 @@
+/* SwipeableCards Component Styles */
+
+.swipeable-cards {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  outline: none;
+}
+
+/* Card Stack */
+.swipeable-cards__stack {
+  position: relative;
+  height: 355px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
