@@ -7,7 +7,13 @@
   /* transition: transform 0.2s ease-in-out; */
   height: 20rem;
   width: 20rem;
-  cursor: pointer;
+  cursor: grab;
+  user-select: none;
+}
+
+.card.dragging {
+  cursor: grabbing;
+  z-index: 1000;
 }
 
 .card img {
