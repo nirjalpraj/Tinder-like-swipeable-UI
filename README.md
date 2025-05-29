@@ -109,16 +109,16 @@ swipeThreshold={120} // Pixels to trigger swipe (50-200)
 
 ### SwipeableCards Props
 
-| Prop                  | Type         | Default       | Description                                 |
-| --------------------- | ------------ | ------------- | ------------------------------------------- |
-| \`users\`             | \`Array\`    | **Required**  | Array of user objects to display            |
-| \`onSwipeLeft\`       | \`Function\` | \`undefined\` | Callback when user swipes left (pass)       |
-| \`onSwipeRight\`      | \`Function\` | \`undefined\` | Callback when user swipes right (like)      |
-| \`onComplete\`        | \`Function\` | \`undefined\` | Callback when all cards are swiped          |
-| \`theme\`             | \`String\`   | \`"default"\` | Visual theme ("default", "dark", "minimal") |
-| \`maxVisibleCards\`   | \`Number\`   | \`3\`         | Cards visible in stack (1-5)                |
-| \`swipeThreshold\`    | \`Number\`   | \`100\`       | Pixels to trigger swipe (50-200)            |
-| \`resetswipehistory\` | \`Function\` | \`undefined\` | function to reset swipe history             |
+| Prop             | Type         | Default       | Description                            |
+| ---------------- | ------------ | ------------- | -------------------------------------- |
+| \`users\`        | \`Array\`    | **Required**  | Array of user objects to display       |
+| \`onSwipeLeft\`  | \`Function\` | \`undefined\` | Callback when user swipes left (pass)  |
+| \`onSwipeRight\` | \`Function\` | \`undefined\` | Callback when user swipes right (like) |
+| \`onComplete\`   | \`Function\` | \`undefined\` | Callback when all cards are swiped     |
+
+| \`maxVisibleCards\` | \`Number\` | \`3\` | Cards visible in stack (1-5) |
+| \`swipeThreshold\` | \`Number\` | \`100\` | Pixels to trigger swipe (50-200) |
+| \`resetswipehistory\` | \`Function\` | \`undefined\` | function to reset swipe history |
 
 ### User Object Structure
 
