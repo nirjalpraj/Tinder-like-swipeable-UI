@@ -8,7 +8,6 @@ const SwipeableCards = ({
   users,
   onSwipeLeft,
   onSwipeRight,
-  onComplete,
   maxVisibleCards = 3,
   swipeThreshold = 100,
 }) => {
@@ -26,13 +25,9 @@ const SwipeableCards = ({
       setTimeout(() => {
         setCurrentIndex((prev) => prev + 1);
         setIsAnimating(false);
-
-        if (currentIndex + 1 >= users.length) {
-          onComplete?.();
-        }
       }, 300);
     },
-    [currentIndex, users.length, onSwipeLeft, onComplete, isAnimating]
+    [currentIndex, users.length, onSwipeLeft, isAnimating]
   );
 
   const handleSwipeRight = useCallback(
@@ -46,13 +41,44 @@ const SwipeableCards = ({
       setTimeout(() => {
         setCurrentIndex((prev) => prev + 1);
         setIsAnimating(false);
-        if (currentIndex + 1 >= users.length) {
-          onComplete?.();
-        }
       }, 300);
     },
-    [currentIndex, users.length, onSwipeRight, onComplete, isAnimating]
+    [currentIndex, users.length, onSwipeRight, isAnimating]
   );
+
+  const resetCards = useCallback(() => {
+    setCurrentIndex(0);
+    // setLeftSwipeCount(0)
+    // setRightSwipeCount(0)
+    setIsAnimating(false);
+  }, []);
+
+  if (currentIndex >= users.length) {
+    return (
+      <div className="completion-screen">
+        <div
+          className="completion-screen__emoji"
+          role="img"
+          aria-label="Party emoji"
+        >
+          🎉
+        </div>
+        <h2 className="completion-screen__title">All Done!</h2>
+        <p className="completion-screen__subtitle">
+          You've swiped through all {users.length} cards
+        </p>
+
+        {/* Reset button */}
+        <button
+          onClick={resetCards}
+          className="completion-screen__reset-btn"
+          aria-label="Start over with all cards"
+        >
+          Start Over
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div
